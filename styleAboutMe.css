@@ -5,11 +5,12 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #1d1d1f;
     background-color: #ffffff;
     line-height: 1.6;
     scroll-behavior: smooth;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .container {
@@ -24,86 +25,48 @@ body {
 }
 
 nav {
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
     z-index: 100;
-}
-
-nav ul {
-    list-style: none;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #1d1d1f;
     font-weight: 500;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
     color: #0071e3;
 }
 
-.intro {
-    text-align: center;
-    padding: 40px 0;
-}
+/* --- NỘI DUNG --- */
+.intro { text-align: center; padding: 40px 0; }
+.name { font-size: 3.5rem; font-weight: 600; margin: 10px 0; letter-spacing: -1px; }
+.subtitle { font-size: 1.3rem; color: #0071e3; font-weight: 600; margin-bottom: 30px; }
+.description { max-width: 600px; margin: auto; font-size: 1.1rem; color: #424245; }
 
-.greeting {
-    font-size: 1.1rem;
-    color: #86868b;
-}
-
-.name {
-    font-size: 3.5rem;
-    font-weight: 600;
-    margin: 10px 0;
-    letter-spacing: -1px;
-}
-
-.subtitle {
-    font-size: 1.3rem;
-    color: #0071e3;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-.description {
-    max-width: 600px;
-    margin: auto;
-    font-size: 1.1rem;
-    color: #424245;
-}
-
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    text-align: center;
-}
+.section-title { font-size: 2rem; margin-bottom: 40px; text-align: center; }
 
 .achievement-item {
     margin-bottom: 25px;
     padding: 30px;
     border-radius: 18px;
     background: #f5f5f7;
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
 
-.achievement-item:hover {
-    transform: translateY(-5px);
-}
-
-.location {
+.school-tag {
     font-size: 0.75rem;
     font-weight: bold;
     color: #0071e3;
@@ -122,76 +85,73 @@ nav ul li a:hover {
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
-.icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    display: block;
-}
+.icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
 
-.social-links {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.btn-link {
-    text-decoration: none;
-    color: #1d1d1f;
-    border: 1px solid #d2d2d7;
-    padding: 10px 30px;
-    border-radius: 25px;
-    margin: 0 8px;
-    display: inline-block;
-    transition: all 0.3s;
-}
-
-.btn-link:hover {
-    background: #1d1d1f;
-    color: #ffffff;
-    border-color: #1d1d1f;
-}
-
-.footer-note {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #86868b;
-    margin-top: 40px;
-}
-
-.lang-checkbox {
-    display: none
-}
-
-.lang-en {
-    display: none;
-}
+.lang-checkbox { display: none; }
+.lang-en { display: none; }
 
 #lang-toggle:checked ~ nav .lang-vi,
 #lang-toggle:checked ~ .container .lang-vi,
 #lang-toggle:checked ~ section .lang-vi,
-#lang-toggle:checked ~ footer .lang-vi {
-    display: none;
-}
+#lang-toggle:checked ~ footer .lang-vi { display: none; }
 
 #lang-toggle:checked ~ nav .lang-en,
 #lang-toggle:checked ~ .container .lang-en,
 #lang-toggle:checked ~ section .lang-en,
-#lang-toggle:checked ~ footer .lang-en {
-    display: inline; 
-}
+#lang-toggle:checked ~ footer .lang-en { display: inline; }
 
 .lang-btn {
     background-color: #0071e3;
     color: white;
-    padding: 4px 10px;
-    border-radius: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 0.8rem;
     font-weight: bold;
+}
+
+.eye-icon {
+    cursor: pointer;
+    display: inline-block;
     transition: 0.3s;
 }
 
-.lang-btn:hover {
-    background-color: #005bb7;
+.eye-icon:hover {
+    transform: scale(1.5) rotate(15deg);
+}
+
+.idol-mode-active {
+    background-color: #000000 !important;
+    color: #ff375f !important;
+}
+
+.idol-mode-active nav {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.idol-mode-active nav ul li a {
+    color: #ffffff !important;
+}
+
+.idol-mode-active .hobby-card {
+    background: #1c1c1e !important;
+    color: #ffffff;
+    border: 1px solid #ff375f;
+    box-shadow: 0 0 15px rgba(255, 55, 95, 0.2);
+}
+
+.idol-mode-active .bg-grey {
+    background-color: #121212 !important;
+}
+
+.idol-mode-active .achievement-item {
+    background: #1c1c1e !important;
+    color: #ffffff;
+}
+
+.idol-mode-active .subtitle, 
+.idol-mode-active .school-tag {
+    color: #ff375f !important;
 }

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>It's Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Me - Hải Ân</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <link rel="stylesheet" href="styleAboutMe.css">
 </head>
 <body>
@@ -9,199 +12,71 @@
 
     <nav>
         <ul>
-            <li>
-                <a href="#about">
-                <span class="lang-vi">Giới thiệu</span>
-                <span class="lang-en">Introduction</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#experience">
-                <span class="lang-vi">Thành tích</span>
-                <span class="lang-en">Achievement</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#passion">
-                <span class="lang-vi">Đam mê</span>
-                <span class="lang-en">Passion</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#contact">
-                <span class="lang-vi">Liên hệ</span>
-                <span class="lang-en">Contact</span>
-                </a>
-            </li>
-            
+            <li><a href="#about"><span class="lang-vi">Giới thiệu</span><span class="lang-en">Introduction</span></a></li>
+            <li><a href="#experience"><span class="lang-vi">Thành tích</span><span class="lang-en">Achievement</span></a></li>
+            <li><a href="#hobbies"><span class="lang-vi">Đam mê</span><span class="lang-en">Passion</span></a></li>
+            <li><a href="#contact"><span class="lang-vi">Liên hệ</span><span class="lang-en">Contact</span></a></li>
             <li class="lang-switcher">
                 <label for="lang-toggle" class="lang-btn">
-                    <span class="lang-vi">EN</span>
-                    <span class="lang-en">VI</span>
+                    <span class="lang-vi">EN</span><span class="lang-en">VI</span>
                 </label>
             </li>
         </ul>
     </nav>
 
     <header id="about" class="container">
-
         <div class="intro">
-
-            <p class="greeting">
-                <span class="lang-vi">Xin chào, mình là</span>
-                <span class="lang-en">Hello, I am</span>
-            </p>
-
-            <h1 class="name">
-                <span class="lang-vi">Nguyễn Lư Hải Ân</span>
-                <span class="lang-en">Lu Hai An Nguyen</span>
-            </h1>
-
-            <p class="subtitle">
-                <span class="lang-vi">Học sinh cấp 3 tại Mỹ | GPA 4.0</span>
-                <span class="lang-en">High School Student in US | GPA 4.0</span>
-            </p>
+            <p class="greeting"><span class="lang-vi">Xin chào, mình là</span><span class="lang-en">Hello, I am</span></p>
+            <h1 class="name"><span class="lang-vi">Nguyễn Lư Hải Ân</span><span class="lang-en">Lu Hai An Nguyen</span></h1>
+            <p class="subtitle"><span class="lang-vi">Học sinh cấp 3 tại Mỹ | GPA 4.0</span><span class="lang-en">High School Student in US | GPA 4.0</span></p>
             <p class="description">
-                <span class="lang-vi">Hành trình của mình bắt đầu từ Việt Nam và chuyển tiếp sang Mỹ từ năm lớp 8. Mình yêu thích sự đơn giản và dành phần lớn thời gian rảnh để ủng hộ cho idol 👀</span>
-                <span class="lang-en">My journey started in Vietnam and I moved to the US in 8th grade. I love simplicity and spend most of my free time supporting my favorite idols 👀</span>
+                <span class="lang-vi">Hành trình của mình bắt đầu từ Việt Nam và chuyển tiếp sang Mỹ từ năm lớp 8. Mình yêu thích sự đơn giản và dành phần lớn thời gian rảnh để ủng hộ cho idol <span id="idol-trigger" class="eye-icon">👀</span></span>
+                <span class="lang-en">My journey started in Vietnam and I moved to the US in 8th grade. I love simplicity and spend most of my free time supporting my favorite idols <span id="idol-trigger-en" class="eye-icon">👀</span></span>
             </p>
         </div>
     </header>
 
     <section id="experience" class="container">
-
-        <h2 class="section-title">
-            <span class="lang-vi">Học tập & Thành tích</span>
-            <span class="lang-en">Education & Achievements</span>
-        </h2>
-
+        <h2 class="section-title"><span class="lang-vi">Học tập & Thành tích</span><span class="lang-en">Education & Achievements</span></h2>
         <div class="achievement-list">
-
             <div class="achievement-item">
-
-                <span class="location">Johns Creek High School</span>
+                <span class="school-tag">Johns Creek High School</span>
                 <h3>GPA 4.0</h3>
-
             </div>
-
         </div>
     </section>
 
     <section id="hobbies" class="bg-grey">
-
         <div class="container">
-            <h2 class="section-title">
-                <span class="lang-vi">Sở thích & Đam mê</span>
-                <span class="lang-en">Hobbies & Passions</span>
-            </h2>
-
+            <h2 class="section-title"><span class="lang-vi">Sở thích & Đam mê</span><span class="lang-en">Hobbies & Passions</span></h2>
             <div class="hobby-grid">
-                <div class="hobby-card">   
-                    <span class="icon">💋</span>
-
-                    <h3>
-                        <span class="lang-vi">Làm đẹp</span>
-                        <span class="lang-en">Beauty care</span>
-                    </h3>
-                    <p>
-                        <span class="lang-vi">Vì một tương lai chụp hình không dùng filter...</span>
-                        <span class="lang-en">For a future where my photos don't need filters…</span>
-                    </p>
-                </div>
-
-                <div class="hobby-card">
-                    <span class="icon">💤</span>
-
-                    <h3>
-                        <span class="lang-vi">Ngủ</span>
-                        <span class="lang-en">Sleeping</span>
-                    </h3>
-
-                    <p>
-                        <span class="lang-vi">Có vẻ hơi lạ nhưng ngủ chính là một trong những sở thích của mình vì nó giúp mình thư giãn sau những lần làm việc mệt mỏi</span>
-                        <span class="lang-en">It may sound a bit strange, but sleeping is actually one of my hobbies because it helps me relax after tiring work</span>
-                    </p>
-                </div>
-
-                <div class="hobby-card">
-                    <span class="icon">🎵</span>
-
-                    <h3>
-                        <span class="lang-vi">Âm nhạc</span>
-                        <span class="lang-en">Music</span>
-                    </h3>
-
-                    <p>
-                        <span class="lang-vi">Mình là fangirl mà, việc stream nhạc, chạy bài để tăng tương tác cho idol là việc không thể thiếu!!</span>
-                        <span class="lang-en">I'm a fangirl, and streaming music is an essential part of supporting my idol!!</span>
-                    </p>
-                </div>
-
-                <div class="hobby-card">
-                    <span class="icon">👩‍🍳</span>
-
-                    <h3>
-                        <span class="lang-vi">Làm bánh</span>
-                        <span class="lang-en">Baking</span>
-                    </h3>
-
-                    <p>
-                        <span class="lang-vi">Lâu lâu cũng nổi hứng làm bánh (trộm vía có cái ngon)</span>
-                        <span class="lang-en">Sometimes I get inspired to bake (thankfully, it tastes good)</span>
-                    </p>
-                </div>
-
-                <div class="hobby-card">
-
-                    <span class="icon">🎮</span>
-
-                    <h3>
-                        <span class="lang-vi">Chơi game</span>
-                        <span class="lang-en">Playing games</span>
-                    </h3>
-
-                    <p>
-                        <span class="lang-vi">Mình cũng khá là thích chơi game (không tới mức nghiện). Bạn bè xung quanh mình cũng chủ yếu từ game mà ra</span>
-                        <span class="lang-en">I quite enjoy playing games, but I'm not addicted to them. Most of my friends are people I met through gaming</span>
-                    </p>
-                </div>
-
-                <div class="hobby-card">
-
-                    <span class="icon">🎬</span>
-
-                    <h3>
-                        <span class="lang-vi">Nghe audio</span>
-                        <span class="lang-en">Listening to audio</span>
-                    </h3>
-
-                    <p>
-                        <span class="lang-vi">Mình mê siêu thích nghe truyện audio hoặc nghe broadcast vì khi nghe cảm thấy như có người sẵn lòng trò chuyện với mình</span>
-                        <span class="lang-en">I really love listening to audio stories or broadcasts because it feels like someone is willing to talk to me</span>
-                    </p>
-                </div>
-
+                <div class="hobby-card"><span class="icon">💋</span><h3><span class="lang-vi">Làm đẹp</span><span class="lang-en">Beauty care</span></h3><p><span class="lang-vi">Vì một tương lai chụp hình không dùng filter...</span><span class="lang-en">For a future where my photos don't need filters…</span></p></div>
+                <div class="hobby-card"><span class="icon">💤</span><h3><span class="lang-vi">Ngủ</span><span class="lang-en">Sleeping</span></h3><p><span class="lang-vi">Giúp mình thư giãn sau những giờ học mệt mỏi</span><span class="lang-en">Helps me relax after tiring school hours</span></p></div>
+                <div class="hobby-card"><span class="icon">🎵</span><h3><span class="lang-vi">Âm nhạc</span><span class="lang-en">Music</span></h3><p><span class="lang-vi">Việc stream nhạc cho idol là không thể thiếu!!</span><span class="lang-en">Streaming music for my idol is essential!!</span></p></div>
+                <div class="hobby-card"><span class="icon">👩‍🍳</span><h3><span class="lang-vi">Làm bánh</span><span class="lang-en">Baking</span></h3><p><span class="lang-vi">Lâu lâu cũng nổi hứng làm bánh (trộm vía ngon)</span><span class="lang-en">Sometimes I get inspired to bake (and it tastes good)</span></p></div>
             </div>
-
         </div>
-
-    </section>
-
-
-
     </section>
 
     <footer id="contact">
         <div class="container">
-
-            <span class="lang-vi"><p class="footer-note"> Liên hệ: nguyenluhaian@gmail.com</p></span>
-            <span class="lang-en"><p class="footer-note"> Contact: nguyenluhaian@gmail.com</p></span>
-
+            <p class="footer-note">Contact: nguyenluhaian@gmail.com</p>
         </div>
     </footer>
 
+    <script>
+        const eyeTriggers = document.querySelectorAll('.eye-icon');
+        eyeTriggers.forEach(el => {
+            el.addEventListener('click', () => {
+                confetti({
+                    particleCount: 150,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                    colors: ['#ff375f', '#0071e3', '#ffffff']
+                });
+                document.body.classList.toggle('idol-mode-active');
+            });
+        });
+    </script>
 </body>
 </html>
