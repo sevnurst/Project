@@ -1,9 +1,11 @@
+/* 1. Global Reset: Remove default margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 2. Base Styles: Fonts, colors, and smooth scrolling */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #1d1d1f;
@@ -13,6 +15,7 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 
+/* 3. Layout: Standard container and backgrounds */
 .container {
     max-width: 900px;
     margin: auto;
@@ -24,6 +27,7 @@ body {
     width: 100%;
 }
 
+/* 4. Navigation: Sticky menu with blur effect */
 nav {
     padding: 20px 0;
     text-align: center;
@@ -50,12 +54,13 @@ nav ul li a:hover {
     color: #0071e3;
 }
 
-/* --- NỘI DUNG --- */
+/* 5. Typography: Styles for names and titles */
 .intro { text-align: center; padding: 40px 0; }
 .name { font-size: 3.5rem; font-weight: 600; margin: 10px 0; letter-spacing: -1px; }
 .subtitle { font-size: 1.3rem; color: #0071e3; font-weight: 600; margin-bottom: 30px; }
 .description { max-width: 600px; margin: auto; font-size: 1.1rem; color: #424245; }
 
+/* 6. Achievement Items: Box styling for school info */
 .section-title { font-size: 2rem; margin-bottom: 40px; text-align: center; }
 
 .achievement-item {
@@ -73,6 +78,7 @@ nav ul li a:hover {
     text-transform: uppercase;
 }
 
+/* 7. Hobby Grid: Responsive cards for interests */
 .hobby-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -90,6 +96,7 @@ nav ul li a:hover {
 
 .icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
 
+/* 8. Language Switching: CSS logic to show/hide text based on checkbox */
 .lang-checkbox { display: none; }
 .lang-en { display: none; }
 
@@ -112,6 +119,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+/* 9. Interactive Elements: Hover effects for eye icon */
 .eye-icon {
     cursor: pointer;
     display: inline-block;
@@ -122,6 +130,7 @@ nav ul li a:hover {
     transform: scale(1.5) rotate(15deg);
 }
 
+/* 10. Dark Mode: Styles for the "Idol Mode" theme */
 .idol-mode-active {
     background-color: #000000 !important;
     color: #ff375f !important;
